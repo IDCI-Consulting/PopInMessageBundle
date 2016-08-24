@@ -1,7 +1,7 @@
 {
   "name": "idci/pop-in-message-bundle",
   "type": "symfony-bundle",
-  "description": "Symfony PopInMessageBundle",
+  "description": "Symfony2 bundle that easily allow to display pop in according to a configuration",
   "keywords": ["popin", "message", "modal", "application", "json"],
   "license": "GPL-3.0+",
   "authors": [
@@ -12,8 +12,10 @@
     }
   ],
   "require": {
-    "php": ">=5.3.3",
-    "symfony/framework-bundle":">=2.3"
+    "php": ">=5.3.9",
+    "symfony/framework-bundle":"~2.3",
+    "twig/twig": "*",
+    "twig/extensions": "~1.0"
   },
   "autoload": {
     "psr-0": { "IDCI\\Bundle\\PopInMessageBundle\\": "" }
