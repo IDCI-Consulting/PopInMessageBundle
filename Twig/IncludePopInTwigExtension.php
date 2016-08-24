@@ -69,7 +69,8 @@ class IncludePopInTwigExtension extends \Twig_Extension
                 array(
                     'id'      => $popIn->getName(),
                     'title'   => $popIn->getTitle(),
-                    'content' => $popIn->getContent()
+                    'content' => $popIn->getContent(),
+                    'footer'  => $popIn->getFooter(),
                 )
             );
         }

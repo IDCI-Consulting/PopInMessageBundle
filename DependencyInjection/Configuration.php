@@ -29,6 +29,7 @@ class Configuration implements ConfigurationInterface
                         ->children()
                             ->scalarNode('title')->defaultNull()->end()
                             ->scalarNode('content')->defaultNull()->end()
+                            ->scalarNode('footer')->defaultNull()->end()
                             ->arrayNode('display_rules')
                                 ->defaultValue(array())->prototype('variable')->end()
                             ->end()

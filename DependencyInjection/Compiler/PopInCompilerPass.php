@@ -35,7 +35,8 @@ class PopInCompilerPass implements CompilerPassInterface
             $serviceDefinition->replaceArgument(0, $name);
             $serviceDefinition->replaceArgument(1, $popInConfiguration['title']);
             $serviceDefinition->replaceArgument(2, $popInConfiguration['content']);
-            $serviceDefinition->replaceArgument(3, $popInConfiguration['display_rules']);
+            $serviceDefinition->replaceArgument(3, $popInConfiguration['footer']);
+            $serviceDefinition->replaceArgument(4, $popInConfiguration['display_rules']);
 
             $container->setDefinition($serviceName, $serviceDefinition);
 

@@ -31,6 +31,13 @@ interface PopInInterface
     public function getContent();
 
     /**
+     * Returns footer.
+     *
+     * @return string
+     */
+    public function getFooter();
+
+    /**
      * Returns the rules.
      *
      * @return array

@@ -25,6 +25,11 @@ class PopIn implements PopInInterface
     private $content;
 
     /**
+     * @var string
+     */
+    private $footer;
+
+    /**
      * @var array
      */
     private $rules;
@@ -37,11 +42,12 @@ class PopIn implements PopInInterface
      * @param string $content
      * @param array  $rules
      */
-    public function __construct($name, $title, $content, array $rules = array())
+    public function __construct($name, $title, $content, $footer, array $rules = array())
     {
         $this->name    = $name;
         $this->title   = $title;
         $this->content = $content;
+        $this->footer  = $footer;
         $this->rules   = $rules;
     }
 
@@ -67,6 +73,14 @@ class PopIn implements PopInInterface
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * @{inheritdoc}
+     */
+    public function getFooter()
+    {
+        return $this->footer;
     }
 
     /**

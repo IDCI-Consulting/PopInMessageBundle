@@ -21,7 +21,7 @@ services:
 
   idci_pop_in_message.pop_in:
     class: IDCI\Bundle\PopInMessageBundle\PopIn\PopIn
-    arguments: [null, null, null, null]
+    arguments: [null, null, null, null, null]
     abstract: true
 
   #Twig
