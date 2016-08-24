@@ -1,0 +1,33 @@
+services:
+
+  # Display Rule
+  idci_pop_in_message.display_rule_registry:
+    class: IDCI\Bundle\PopInMessageBundle\DisplayRule\DisplayRuleRegistry
+
+  idci_pop_in_message.display_rule_manager:
+    class: IDCI\Bundle\PopInMessageBundle\DisplayRule\DisplayRuleManager
+    arguments:
+      - @idci_pop_in_message.display_rule_registry
+
+  # Pop In
+  idci_pop_in_message.pop_in_registry:
+    class: IDCI\Bundle\PopInMessageBundle\PopIn\PopInRegistry
+
+  idci_pop_in_message.pop_in_manager:
+    class: IDCI\Bundle\PopInMessageBundle\PopIn\PopInManager
+    arguments:
+      - @idci_pop_in_message.pop_in_registry
+      - @idci_pop_in_message.display_rule_manager
+
+  idci_pop_in_message.pop_in:
+    class: IDCI\Bundle\PopInMessageBundle\PopIn\PopIn
+    arguments: [null, null, null, null]
+    abstract: true
+
+  #Twig
+  idci_pop_in_message.twig.include_pop_in_extension:
+    class: IDCI\Bundle\PopInMessageBundle\Twig\IncludePopInTwigExtension
+    arguments:
+      - @idci_pop_in_message.pop_in_manager
+    tags:
+      - { name: twig.extension }

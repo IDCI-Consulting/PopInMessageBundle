@@ -1,0 +1,7 @@
+services:
+
+    # Display rules list
+    idci_pop_in_message.display_rule.duration:
+        class: IDCI\Bundle\PopInMessageBundle\DisplayRule\DurationDisplayRule
+        tags:
+            - { name: idci_pop_in_message.display_rule, alias: duration }
